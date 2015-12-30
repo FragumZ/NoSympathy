@@ -32,6 +32,7 @@ Partial Class CharacterTestForm
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.CharacterBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.CharacterBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
@@ -44,8 +45,6 @@ Partial Class CharacterTestForm
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.CharacterBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.CharacterBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.CharacterBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.NameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.LevelDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.RaceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -57,10 +56,11 @@ Partial Class CharacterTestForm
         Me.JoinedDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CreatedDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CharacterBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         CType(Me.CharacterBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CharacterBindingNavigator.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CharacterBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CharacterBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -114,9 +114,9 @@ Partial Class CharacterTestForm
         '
         'RichTextBox1
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(16, 100)
+        Me.RichTextBox1.Location = New System.Drawing.Point(539, 12)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(438, 505)
+        Me.RichTextBox1.Size = New System.Drawing.Size(438, 132)
         Me.RichTextBox1.TabIndex = 5
         Me.RichTextBox1.Text = ""
         '
@@ -146,6 +146,11 @@ Partial Class CharacterTestForm
         Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
         Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'CharacterBindingSource
+        '
+        Me.CharacterBindingSource.AllowNew = False
+        Me.CharacterBindingSource.DataSource = GetType(Models.Character)
         '
         'BindingNavigatorCountItem
         '
@@ -238,19 +243,10 @@ Partial Class CharacterTestForm
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NameDataGridViewTextBoxColumn, Me.LevelDataGridViewTextBoxColumn, Me.RaceDataGridViewTextBoxColumn, Me.ProfessionDataGridViewTextBoxColumn, Me.GenderDataGridViewTextBoxColumn, Me.RankDataGridViewTextBoxColumn, Me.DeathsDataGridViewTextBoxColumn, Me.AgeDataGridViewTextBoxColumn, Me.JoinedDataGridViewTextBoxColumn, Me.IDDataGridViewTextBoxColumn, Me.CreatedDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.CharacterBindingSource1
-        Me.DataGridView1.Location = New System.Drawing.Point(460, 28)
+        Me.DataGridView1.Location = New System.Drawing.Point(32, 157)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(505, 327)
+        Me.DataGridView1.Size = New System.Drawing.Size(945, 327)
         Me.DataGridView1.TabIndex = 7
-        '
-        'CharacterBindingSource
-        '
-        Me.CharacterBindingSource.AllowNew = False
-        Me.CharacterBindingSource.DataSource = GetType(Models.Character)
-        '
-        'CharacterBindingSource1
-        '
-        Me.CharacterBindingSource1.DataSource = GetType(Models.Character)
         '
         'NameDataGridViewTextBoxColumn
         '
@@ -318,6 +314,10 @@ Partial Class CharacterTestForm
         Me.CreatedDataGridViewTextBoxColumn.HeaderText = "Created"
         Me.CreatedDataGridViewTextBoxColumn.Name = "CreatedDataGridViewTextBoxColumn"
         '
+        'CharacterBindingSource1
+        '
+        Me.CharacterBindingSource1.DataSource = GetType(Models.Character)
+        '
         'CharacterTestForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -337,8 +337,8 @@ Partial Class CharacterTestForm
         CType(Me.CharacterBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.CharacterBindingNavigator.ResumeLayout(False)
         Me.CharacterBindingNavigator.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CharacterBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CharacterBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
