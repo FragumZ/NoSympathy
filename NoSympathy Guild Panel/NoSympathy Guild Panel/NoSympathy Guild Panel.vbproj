@@ -99,12 +99,6 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Tests Only\CharacterTestForm.Designer.vb">
-      <DependentUpon>CharacterTestForm.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Tests Only\CharacterTestForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -116,12 +110,6 @@
       <DependentUpon>Form2.vb</DependentUpon>
     </Compile>
     <Compile Include="Form2.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Tests Only\FormTestingGrounds.Designer.vb">
-      <DependentUpon>FormTestingGrounds.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Tests Only\FormTestingGrounds.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MyAccount.Designer.vb">
@@ -171,17 +159,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Tests Only\CharacterTestForm.resx">
-      <DependentUpon>CharacterTestForm.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Tests Only\FormTestingGrounds.resx">
-      <DependentUpon>FormTestingGrounds.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="music.resx">
       <DependentUpon>music.vb</DependentUpon>

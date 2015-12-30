@@ -25,3 +25,11 @@ Public Class Guild
 
     End Sub
 End Class
+
+Public Class GuildRank
+    Public Id As String
+    Public Order As Integer
+    Public Permissions As List(Of String)
+     
+    Public Icon As String
+End Class
